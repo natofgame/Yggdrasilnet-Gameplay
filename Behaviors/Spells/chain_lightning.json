@@ -1,0 +1,31 @@
+{
+  "id": "chain_lightning",
+  "type": "Projectile",
+  "timing": {
+    "anticipation": 0.2,
+    "strike": 0.05,
+    "impact": 0.05,
+    "return": 0.35
+  },
+  "skipReturnPhase": false,
+  "targeting": {
+    "hitBoxMin": { "x": -0.5, "y": 0, "z": -0.5 },
+    "hitBoxMax": { "x": 0.5, "y": 2, "z": 0.5 },
+    "range": 12
+  },
+  "projectile": {
+    "speed": 30,
+    "lifetime": 0.6,
+    "hitRadius": 0.5,
+    "spawnForward": 0.4,
+    "spawnHeight": 1.0,
+    "chain": {
+      "maxBounces": 4,
+      "radius": 6,
+      "damageMultiplierPerBounce": 0.8
+    }
+  },
+  "effects": [
+    { "type": "Damage", "target": "Target", "amount": 30 }
+  ]
+}
