@@ -1,0 +1,15 @@
+﻿{
+  "id": "donjon_spawn_rule",
+  "entity": [
+    {
+      "weight": 95,
+      "chance": 60,
+      "id": "slime"
+    },
+    {
+      "weight": 5,
+      "chance": 25,
+      "id": "enemy"
+    }
+  ]
+}

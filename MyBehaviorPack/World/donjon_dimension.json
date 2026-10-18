@@ -1,0 +1,12 @@
+﻿{
+  "id": "overworld",
+  "components": {
+    "chunk": {
+      "spawn_rule": [
+        "donjon_spawn_rule"
+      ],
+      "spawn_interval": 10,
+      "max_entities": 4
+    }
+  }
+}
