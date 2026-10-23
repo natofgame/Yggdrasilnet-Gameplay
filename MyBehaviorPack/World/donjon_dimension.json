@@ -1,9 +1,17 @@
 ﻿{
   "id": "overworld",
   "components": {
+    "persistence": {
+      "save_name": "overworld"
+    },
+    "spawn_point": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
     "chunk": {
       "spawn_rule": [
-        "donjon_spawn_rule"
+     
       ],
       "spawn_interval": 10,
       "max_entities": 4
