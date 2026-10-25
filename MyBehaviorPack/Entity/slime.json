@@ -52,8 +52,12 @@
         }
       ]
     },
+    "debuff": {
+      "freezeDurationMultiplier": 1.25,
+      "castDurationMultiplier": 1.5
+    },
     "living": {
-      "max": 500000.0
+      "max": 40.0
     },
     "combat": {
       "spells": [

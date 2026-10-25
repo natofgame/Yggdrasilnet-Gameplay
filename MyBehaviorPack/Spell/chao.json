@@ -4,7 +4,7 @@
     "meta": {
       "type": "projectile",
       "skipReturnPhase": false,
-      "castMoveSpeedReductionPercent": 0.5
+      "castMoveSpeedReductionPercent": 0.2
     },
     "timing": {
       "anticipation": 0.2,

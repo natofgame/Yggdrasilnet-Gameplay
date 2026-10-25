@@ -4,7 +4,7 @@
     "meta": {
       "type": "projectile",
       "skipReturnPhase": false,
-      "castMoveSpeedReductionPercent": 0.9
+      "castMoveSpeedReductionPercent": 0.6
     },
     "timing": {
       "anticipation": 0.3,
@@ -14,14 +14,14 @@
     },
     "cooldown": {
       "type": "fixed",
-      "durationSeconds": 0.01
+      "durationSeconds": 15
     },
     "effects": {
       "effects": [
         {
           "type": "damage",
           "target": "target",
-          "amount": 10.0
+          "amount": 60.0
         },
         {
           "type": "punch",

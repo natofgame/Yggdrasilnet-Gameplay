@@ -18,6 +18,7 @@
       "hitBoxMaxX": 3.0,
       "hitBoxMaxY": 2,
       "hitBoxMaxZ": 3.0,
+      "hasCardinalHitBox": true,
       "cardinalHitBoxMinX": -3.5,
       "cardinalHitBoxMinY": -1,
       "cardinalHitBoxMinZ": -3.0,
@@ -30,7 +31,7 @@
         {
           "type": "damage",
           "target": "target",
-          "amount": 15
+          "amount": 8
         },
         {
           "type": "dash",
