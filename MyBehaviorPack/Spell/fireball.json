@@ -43,7 +43,7 @@
     "projectile": {
       "entityDefinitionId": "fireball",
       "speed": 22.0,
-      "lifetime": 2.5,
+      "lifetime": 1,
       "maxHits": 1,
       "spawnForward": 0.3,
       "spawnHeight": 0,

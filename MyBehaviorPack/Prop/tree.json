@@ -1,0 +1,11 @@
+{
+  "id": "tree",
+  "components": {
+    "solid": {},
+    "placeable_on": {
+      "tiles": [
+        "grass"
+      ]
+    }
+  }
+}

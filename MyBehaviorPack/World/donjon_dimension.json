@@ -1,20 +1,160 @@
-﻿{
+{
   "id": "overworld",
   "components": {
-    "persistence": {
-      "save_name": "overworld"
-    },
     "spawn_point": {
       "x": 0,
       "y": 0,
       "z": 0
     },
-    "chunk": {
-      "spawn_rule": [
-     
+    "zone_map": {
+      "random_seed": true,
+      "seed": 1234,
+      "size": { "min": 10, "max": 12 },
+      "ground": "grass",
+      "border": "shore",
+      "void_tile": "water",
+      "void_margin": 15,
+      "shape": {
+        "roundness": 0.5,
+        "inset": 2,
+        "noise": [
+          { "scale": 20, "amplitude": 6.5 },
+          { "scale": 7, "amplitude": 2.5 }
+        ],
+        "border_band": 2,
+        "min_lake": 12,
+        "funnel_width": { "min": 5, "max": 7 }
+      },
+      "ground_decor": {
+        "chance": 0.08,
+        "props": [
+          { "prop": "grass_tuft", "weight": 3 },
+          { "prop": "flowers", "weight": 0.8 },
+          { "prop": "pebbles", "weight": 1.5 }
+        ]
+      },
+      "holes": {
+        "count": { "min": 2, "max": 5 },
+        "radius": { "min": 5, "max": 9 },
+        "warp": { "scale": 5, "amplitude": 1.5 },
+        "road_clearance": 5,
+        "shore_distance": 5,
+        "min_size": 12
+      },
+      "road": {
+        "tile": "path",
+        "width_base": 4.5,
+        "width_variation": 0.5,
+        "width_noise_scale": 0.05,
+        "wide_share": 0.2,
+        "wear": {
+          "gap_tile": "",
+          "patches": 0.25
+        },
+        "meander": {
+          "amplitude": 2,
+          "wavelength": 12,
+          "fade": 6
+        },
+        "min_void_distance": 7,
+        "landmarks": [
+          "boulder",
+          "stump"
+        ]
+      },
+      "layout": {
+        "type_noise_scale": 40
+      },
+      "network": {
+        "loops": { "min": 4, "max": 5 },
+        "rooms": { "min": 5, "max": 5 },
+        "dead_end_rooms": { "min": 1, "max": 2 },
+        "room_radius": { "min": 6, "max": 9 },
+        "node_spacing": { "min": 18, "max": 24 },
+        "bend": { "min": 0.15, "max": 0.35 },
+        "junction_widening": 1.3,
+        "pillar_chance": 0.3,
+        "fingers": { "min": 4, "max": 8 },
+        "finger_length": { "min": 4, "max": 8 },
+        "min_block": 12
+      },
+      "island_types": [
+        {
+          "id": "grove",
+          "weight": 3,
+          "ground": "forest_floor",
+          "core": [
+            { "prop": "tree", "weight": 1 }
+          ],
+          "fringe": [
+            { "prop": "bush", "weight": 6 }
+          ],
+          "fringe_chance": 0.5,
+          "halo": [
+            {
+              "distance": 1,
+              "chance": 0.15,
+              "props": [
+                { "prop": "flowers", "weight": 1 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "lake",
+          "weight": 1.8,
+          "ground": "water",
+          "halo": [
+            {
+              "distance": 1,
+              "chance": 0.15,
+              "props": [
+                { "prop": "flowers", "weight": 1.5 },
+                { "prop": "tree", "weight": 1 }
+              ]
+            }
+          ]
+        }
       ],
-      "spawn_interval": 10,
-      "max_entities": 4
+      "decor_islands": [
+        {
+          "tile": "water",
+          "per_room": { "min": 0, "max": 2 },
+          "radius": { "min": 1.5, "max": 3 },
+          "shore": [
+            { "prop": "grass_tuft", "weight": 2 },
+            { "prop": "flowers", "weight": 1 },
+            { "prop": "pebbles", "weight": 1 }
+          ],
+          "shore_chance": 0.3
+        }
+      ],
+      "points_of_interest": [
+        {
+          "prop": "chest",
+          "room": "dead_end",
+          "count": { "min": 2, "max": 4 },
+          "spacing": 10,
+          "frame_decor": [
+            { "prop": "flowers", "weight": 1 },
+            { "prop": "pebbles", "weight": 1 }
+          ],
+          "frame_decor_chance": 0.5
+        },
+        {
+          "prop": "dungeon_entrance",
+          "room": "exit",
+          "count": { "min": 1, "max": 1 },
+          "spacing": 10,
+          "frame_decor_chance": 0.5
+        }
+      ]
+    },
+    "chunk": {
+      "spawn_rule": ["donjon_spawn_rule"],
+      "max_total": 50,
+      "spawn_tiles": ["grass"],
+      "density": { "room": 1.75, "corridor": 1 }
     }
   }
 }

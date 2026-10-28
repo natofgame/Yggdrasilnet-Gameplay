@@ -1,0 +1,10 @@
+{
+  "id": "grass_tuft",
+  "components": {
+    "placeable_on": {
+      "tiles": [
+        "grass"
+      ]
+    }
+  }
+}

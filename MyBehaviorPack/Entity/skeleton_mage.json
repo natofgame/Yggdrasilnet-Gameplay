@@ -1,0 +1,118 @@
+{
+  "id": "skeleton_mage",
+  "components": {
+    "movement": {
+      "speed": 1.5,
+      "steering": {
+        "avoidRadius": 0,
+        "avoidWeight": 1,
+        "seekWeight": 1,
+        "moveSpeed": 0,
+        "circleRadius": 0,
+        "circleWeight": 1,
+        "circleDirection": 1,
+        "wanderWeight": 0,
+        "wanderJitter": 1,
+        "wanderAngle": 0,
+        "roamRadius": 0,
+        "canPunch": true
+      }
+    },
+    "brain": {
+      "prudence": 1,
+      "impulsivity": 7,
+      "aggressivity": 10,
+      "courage": 8,
+      "curiosity": 6,
+      "discipline": 0,
+      "sightRange": 3,
+      "chaseRange": 20,
+      "alertRadius": 5,
+      "perceptionInterval": 0.2,
+      "surprisedDuration": 0.4,
+      "fearDuration": 2.5,
+      "fearRadius": 8,
+      "actions": [
+        {
+          "type": "wander",
+          "speed": 1.8,
+          "radius": 5.5,
+          "arriveDistance": 0.5,
+          "idleDuration": 2
+        },
+        {
+          "type": "hold",
+          "speed": 2,
+          "baseRadius": 3.8,
+          "prudenceRadius": 2.6,
+          "arriveTolerance": 0.6,
+          "orbitSpeed": 2.5,
+          "orbitCircleWeight": 0.55,
+          "orbitWanderWeight": 0.5,
+          "orbitWanderJitter": 0.8,
+          "separationRadius": 1.15
+        },
+        {
+          "type": "reposition",
+          "speed": 3,
+          "baseRadius": 3.6,
+          "prudenceRadius": 2.3,
+          "angleOffset": 1.1,
+          "circleWeight": 0.5,
+          "wanderWeight": 0.45,
+          "wanderJitter": 0.9,
+          "burstScore": 0.84
+        },
+        {
+          "type": "flank",
+          "speed": 4,
+          "distance": 3.5
+        },
+        {
+          "type": "attack",
+          "speed": 9,
+          "castRange": 6,
+          "circleWeight": 0.3,
+          "arrivalBand": 2,
+          "minApproachFactor": 0.35,
+          "circleStartDistance": 1.6,
+          "circleNearRangeFactor": 0.15,
+          "spellIndex": 0,
+          "minCooldown": 0.85,
+          "maxCooldown": 2.1,
+          "cooldownJitter": 0.35,
+          "randomReadySpell": true
+        },
+        {
+          "type": "flee",
+          "speed": 3,
+          "dashMultiplier": 1.5,
+          "dashDuration": 0.22
+        }
+      ]
+    },
+    "debuff": {
+      "freezeDurationMultiplier": 1.25,
+      "castDurationMultiplier": 1.5
+    },
+    "living": {
+      "max": 100,
+      "hasCurrent": false,
+      "current": 0,
+      "deathDuration": 5
+    },
+    "combat": {
+      "spells": [
+        "chao"
+      ]
+    },
+    "collision": {
+      "x": 1,
+      "y": 1.8,
+      "z": 1,
+      "isTrigger": false,
+      "layer": "monster",
+      "mask": "all"
+    }
+  }
+}
