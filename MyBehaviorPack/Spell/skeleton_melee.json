@@ -1,10 +1,11 @@
 {
   "id": "skeleton_melee",
   "components": {
-    "meta": {
-      "type": "melee",
-      "skipReturnPhase": false,
-      "castMoveSpeedReductionPercent": 0.5
+    "type": {
+      "type": "melee"
+    },
+    "debuff": {
+      "reduction": 0.5
     },
     "timing": {
       "anticipation": 0.5,

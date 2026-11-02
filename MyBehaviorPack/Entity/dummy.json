@@ -5,9 +5,9 @@
       "max": 500000.0
     },
     "collision": {
-      "x": 0.8,
-      "y": 0.8,
-      "z": 0.8,
+      "sizeX": 0.8,
+      "sizeY": 0.8,
+      "sizeZ": 0.8,
       "layer": "monster"
     }
   }

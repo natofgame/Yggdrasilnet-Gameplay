@@ -1,0 +1,48 @@
+{
+  "id": "flame_thrower",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 0.5
+    },
+    "hold": {
+      "interval": 0.066,
+      "duration": 3.0
+    },
+    "timing": {
+      "anticipation": 0.12,
+      "strike": 0.03,
+      "impact": 0.0,
+      "return": 0.15
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 0.5
+    },
+    "effects": {
+      "effects": [
+        {
+          "type": "damage",
+          "target": "target",
+          "amount": 2.0
+        }
+      ]
+    },
+    "projectile": {
+      "sizeX": 0.5,
+      "sizeY": 0.5,
+      "sizeZ": 0.5,
+      "speed": 10.0,
+      "lifetime": 0.35,
+      "maxHits": 2,
+      "spawnForward": 0.5,
+      "spawnHeight": 0,
+      "autoTargetEnabled": false,
+      "autoTargetInfluence": 0.0,
+      "autoTargetRange": 0.0,
+      "spreadDegrees": 22.0
+    }
+  }
+}

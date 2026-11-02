@@ -1,7 +1,7 @@
 {
   "id": "slime_melee",
   "components": {
-    "meta": {
+    "type": {
       "type": "melee"
     },
     "timing": {

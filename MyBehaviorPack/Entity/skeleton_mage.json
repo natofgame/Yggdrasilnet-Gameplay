@@ -92,25 +92,25 @@
       ]
     },
     "debuff": {
-      "freezeDurationMultiplier": 1.25,
-      "castDurationMultiplier": 1.5
+      "freeze": 1.25,
+      "cast": 1.5
     },
     "living": {
       "max": 100,
       "hasCurrent": false,
       "current": 0,
-      "deathDuration": 5
+      "death": 5
     },
     "combat": {
       "spells": [
-        "chao"
+        "fireball"
       ]
     },
     "collision": {
-      "x": 1,
-      "y": 1.8,
-      "z": 1,
-      "isTrigger": false,
+      "sizeX": 1,
+      "sizeY": 1.8,
+      "sizeZ": 1,
+      "trigger": false,
       "layer": "monster",
       "mask": "all"
     }

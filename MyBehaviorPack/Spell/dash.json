@@ -1,27 +1,28 @@
 ﻿{
   "id": "dash",
   "components": {
-    "meta": {
-      "type": "self",
-      "skipReturnPhase": true
+    "type": {
+      "type": "self"
     },
     "timing": {
-      "anticipation": 0.01,
-      "strike": 0.1,
+      "anticipation": 0.02,
+      "strike": 0.15,
       "impact": 0.25,
-      "return": 0.25
+      "return": 0.25,
+      "skipReturn": true
     },
     "cooldown": {
       "type": "fixed",
-      "durationSeconds": 0.3
+      "duration": 2
     },
     "effects": {
       "effects": [
         {
           "type": "dash",
+          "delay": 0.05,
           "target": "self",
           "amount": 20,
-          "duration": 0.15
+          "duration": 0.1
         }
       ]
     }

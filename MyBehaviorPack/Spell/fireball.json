@@ -1,20 +1,21 @@
 {
   "id": "fireball",
   "components": {
-    "meta": {
-      "type": "projectile",
-      "skipReturnPhase": false,
-      "castMoveSpeedReductionPercent": 0.4
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 0.7
     },
     "timing": {
-      "anticipation": 0.4,
-      "strike": 0.3,
+      "anticipation": 1,
+      "strike": 0.4,
       "impact": 0.0,
       "return": 0.2
     },
     "cooldown": {
       "type": "fixed",
-      "durationSeconds": 5
+      "duration": 0
     },
     "effects": {
       "effects": [
@@ -41,8 +42,10 @@
       ]
     },
     "projectile": {
-      "entityDefinitionId": "fireball",
-      "speed": 22.0,
+      "sizeX": 0.5,
+      "sizeY": 0.5,
+      "sizeZ": 0.5,
+      "speed": 16.0,
       "lifetime": 1,
       "maxHits": 1,
       "spawnForward": 0.3,
