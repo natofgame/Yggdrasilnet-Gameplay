@@ -5,13 +5,19 @@
       "type": "projectile"
     },
     "debuff": {
-      "reduction": 0.5
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during",
+        "after"
+      ]
     },
     "timing": {
       "anticipation": 0.2,
       "strike": 0.2,
-      "impact": 0.0,
-      "return": 0.1
+      "impact": 0,
+      "return": 0.1,
+      "skipReturn": false
     },
     "cooldown": {
       "type": "fixed",
@@ -22,7 +28,10 @@
         {
           "type": "damage",
           "target": "target",
-          "amount": 10.0
+          "amount": 10,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         }
       ]
     },
@@ -30,14 +39,23 @@
       "sizeX": 0.5,
       "sizeY": 0.5,
       "sizeZ": 0.5,
-      "speed": 20.0,
+      "speed": 20,
       "lifetime": 1,
       "maxHits": 1,
       "spawnForward": 0.3,
       "spawnHeight": 0,
+      "areaDamageEnabled": false,
+      "areaDamageRadius": 0,
       "autoTargetEnabled": true,
       "autoTargetInfluence": 0.5,
-      "autoTargetRange": 5.0
+      "autoTargetRange": 5,
+      "spreadDegrees": 0,
+      "hasChain": false,
+      "chain": {
+        "maxBounces": 3,
+        "radius": 6,
+        "damageMultiplierPerBounce": 0.8
+      }
     }
   }
 }

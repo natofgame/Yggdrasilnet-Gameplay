@@ -103,7 +103,7 @@
     },
     "combat": {
       "spells": [
-        "fireball"
+        "chao"
       ]
     },
     "collision": {
@@ -113,6 +113,10 @@
       "trigger": false,
       "layer": "monster",
       "mask": "all"
+    },
+    "input": {
+      "x": 0,
+      "z": 0
     }
   }
 }

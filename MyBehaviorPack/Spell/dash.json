@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "dash",
   "components": {
     "type": {
@@ -19,10 +19,11 @@
       "effects": [
         {
           "type": "dash",
-          "delay": 0.05,
           "target": "self",
           "amount": 20,
-          "duration": 0.1
+          "duration": 0.1,
+          "delay": 0.05,
+          "activeOnAnticipation": false
         }
       ]
     }

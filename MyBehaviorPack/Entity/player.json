@@ -1,12 +1,24 @@
 {
   "id": "player",
   "components": {
-    "input": {},
+    "input": {
+      "x": 0,
+      "z": 0
+    },
     "movement": {
-      "speed": 3,
+      "speed": 4,
       "steering": {
-        "seekWeight": 1.0,
-        "avoidWeight": 1.0,
+        "avoidRadius": 0,
+        "avoidWeight": 1,
+        "seekWeight": 1,
+        "moveSpeed": 0,
+        "circleRadius": 0,
+        "circleWeight": 1,
+        "circleDirection": 1,
+        "wanderWeight": 0,
+        "wanderJitter": 1,
+        "wanderAngle": 0,
+        "roamRadius": 0,
         "canPunch": false
       }
     },
@@ -14,11 +26,15 @@
       "sizeX": 0.5,
       "sizeY": 1.8,
       "sizeZ": 0.5,
+      "trigger": false,
       "layer": "player",
       "mask": "world|monster|spell"
     },
     "living": {
-      "max": 1000000.0
+      "max": 1000000,
+      "hasCurrent": false,
+      "current": 0,
+      "death": 0
     },
     "combat": {
       "spells": [

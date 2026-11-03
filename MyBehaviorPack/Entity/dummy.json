@@ -2,13 +2,39 @@
   "id": "dummy",
   "components": {
     "living": {
-      "max": 500000.0
+      "max": 500000,
+      "hasCurrent": false,
+      "current": 0,
+      "death": 0
     },
     "collision": {
       "sizeX": 0.8,
       "sizeY": 0.8,
       "sizeZ": 0.8,
-      "layer": "monster"
+      "trigger": false,
+      "layer": "monster",
+      "mask": "all"
+    },
+    "input": {
+      "x": 0,
+      "z": 0
+    },
+    "movement": {
+      "speed": 4,
+      "steering": {
+        "avoidRadius": 0,
+        "avoidWeight": 1,
+        "seekWeight": 1,
+        "moveSpeed": 0,
+        "circleRadius": 0,
+        "circleWeight": 1,
+        "circleDirection": 1,
+        "wanderWeight": 0,
+        "wanderJitter": 1,
+        "wanderAngle": 0,
+        "roamRadius": 0,
+        "canPunch": false
+      }
     }
   }
 }

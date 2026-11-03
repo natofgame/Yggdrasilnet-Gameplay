@@ -8,36 +8,42 @@
       "anticipation": 0.3,
       "strike": 0.12,
       "impact": 0.12,
-      "return": 0.4
+      "return": 0.4,
+      "skipReturn": false
     },
     "targeting": {
       "range": 1,
-      "hitBoxMinX": -3.0,
+      "hitBoxMinX": -3,
       "hitBoxMinY": -1,
-      "hitBoxMinZ": -3.0,
-      "hitBoxMaxX": 3.0,
+      "hitBoxMinZ": -3,
+      "hitBoxMaxX": 3,
       "hitBoxMaxY": 2,
-      "hitBoxMaxZ": 3.0,
+      "hitBoxMaxZ": 3,
       "hasCardinalHitBox": true,
       "cardinalHitBoxMinX": -3.5,
       "cardinalHitBoxMinY": -1,
-      "cardinalHitBoxMinZ": -3.0,
+      "cardinalHitBoxMinZ": -3,
       "cardinalHitBoxMaxX": 3.5,
       "cardinalHitBoxMaxY": 2,
-      "cardinalHitBoxMaxZ": 3.0
+      "cardinalHitBoxMaxZ": 3,
+      "targetLayer": "all"
     },
     "effects": {
       "effects": [
         {
           "type": "damage",
           "target": "target",
-          "amount": 8
+          "amount": 8,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         },
         {
           "type": "dash",
           "target": "self",
           "amount": 25,
           "duration": 0.2,
+          "delay": 0,
           "activeOnAnticipation": true
         }
       ]

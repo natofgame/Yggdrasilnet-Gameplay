@@ -5,13 +5,19 @@
       "type": "melee"
     },
     "debuff": {
-      "reduction": 0.5
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during",
+        "after"
+      ]
     },
     "timing": {
       "anticipation": 0.5,
       "strike": 0.12,
       "impact": 0.12,
-      "return": 0.4
+      "return": 0.4,
+      "skipReturn": false
     },
     "targeting": {
       "range": 1,
@@ -37,6 +43,7 @@
           "target": "target",
           "amount": 8,
           "duration": 0.15,
+          "delay": 0,
           "activeOnAnticipation": false
         }
       ]

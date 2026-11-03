@@ -2,7 +2,21 @@
   "id": "enemy",
   "components": {
     "movement": {
-      "speed": 2.0
+      "speed": 2,
+      "steering": {
+        "avoidRadius": 0,
+        "avoidWeight": 1,
+        "seekWeight": 1,
+        "moveSpeed": 0,
+        "circleRadius": 0,
+        "circleWeight": 1,
+        "circleDirection": 1,
+        "wanderWeight": 0,
+        "wanderJitter": 1,
+        "wanderAngle": 0,
+        "roamRadius": 0,
+        "canPunch": true
+      }
     },
     "brain": {
       "prudence": 1,
@@ -10,18 +24,33 @@
       "aggressivity": 10,
       "courage": 8,
       "curiosity": 6,
+      "discipline": 0,
+      "sightRange": 20,
+      "chaseRange": 20,
+      "alertRadius": 0,
+      "perceptionInterval": 0.2,
+      "surprisedDuration": 0.4,
+      "fearDuration": 2.5,
+      "fearRadius": 8,
       "actions": [
         {
           "type": "wander",
           "speed": 1.8,
-          "radius": 5.5
+          "radius": 5.5,
+          "arriveDistance": 0.5,
+          "idleDuration": 2
         },
         {
           "type": "hold",
           "speed": 3,
           "baseRadius": 3.8,
           "prudenceRadius": 2.6,
-          "orbitSpeed": 2.5
+          "arriveTolerance": 0.6,
+          "orbitSpeed": 2.5,
+          "orbitCircleWeight": 0.55,
+          "orbitWanderWeight": 0.25,
+          "orbitWanderJitter": 0.8,
+          "separationRadius": 1.15
         },
         {
           "type": "reposition",
@@ -29,6 +58,9 @@
           "baseRadius": 3.6,
           "prudenceRadius": 2.3,
           "angleOffset": 1.1,
+          "circleWeight": 0.5,
+          "wanderWeight": 0.45,
+          "wanderJitter": 0.9,
           "burstScore": 0.84
         },
         {
@@ -40,9 +72,16 @@
           "type": "attack",
           "speed": 8.5,
           "castRange": 4,
+          "circleWeight": 0.3,
+          "arrivalBand": 2,
+          "minApproachFactor": 0.35,
+          "circleStartDistance": 1.6,
+          "circleNearRangeFactor": 0.15,
+          "spellIndex": 0,
           "minCooldown": 0.85,
           "maxCooldown": 2.1,
-          "cooldownJitter": 0.35
+          "cooldownJitter": 0.35,
+          "randomReadySpell": true
         },
         {
           "type": "flee",
@@ -57,7 +96,10 @@
       "cast": 1.5
     },
     "living": {
-      "max": 150.0
+      "max": 150,
+      "hasCurrent": false,
+      "current": 0,
+      "death": 0
     },
     "combat": {
       "spells": [
@@ -70,7 +112,13 @@
       "sizeX": 1,
       "sizeY": 1.8,
       "sizeZ": 1,
-      "layer": "monster"
+      "trigger": false,
+      "layer": "monster",
+      "mask": "all"
+    },
+    "input": {
+      "x": 0,
+      "z": 0
     }
   }
 }

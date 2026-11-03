@@ -113,6 +113,10 @@
       "trigger": false,
       "layer": "monster",
       "mask": "all"
+    },
+    "input": {
+      "x": 0,
+      "z": 0
     }
   }
 }

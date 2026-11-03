@@ -5,13 +5,19 @@
       "type": "projectile"
     },
     "debuff": {
-      "reduction": 0.7
+      "reduction": 0.7,
+      "when": [
+        "before",
+        "during",
+        "after"
+      ]
     },
     "timing": {
-      "anticipation": 1,
-      "strike": 0.4,
-      "impact": 0.0,
-      "return": 0.2
+      "anticipation": 1.5,
+      "strike": 0.3,
+      "impact": 0,
+      "return": 0.2,
+      "skipReturn": false
     },
     "cooldown": {
       "type": "fixed",
@@ -22,22 +28,42 @@
         {
           "type": "damage",
           "target": "target",
-          "amount": 35.0
+          "amount": 35,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         },
         {
           "type": "punch",
           "target": "target",
-          "amount": 20.0
+          "amount": 20,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         },
         {
           "type": "damage",
           "target": "aoe",
-          "amount": 15.0
+          "amount": 15,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         },
         {
           "type": "punch",
           "target": "aoe",
-          "amount": 10.0
+          "amount": 10,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
+        },
+        {
+          "type": "punch",
+          "target": "aoe",
+          "amount": 10,
+          "duration": 0.15,
+          "delay": 0,
+          "activeOnAnticipation": false
         }
       ]
     },
@@ -45,16 +71,42 @@
       "sizeX": 0.5,
       "sizeY": 0.5,
       "sizeZ": 0.5,
-      "speed": 16.0,
-      "lifetime": 1,
+      "speed": 15,
+      "lifetime": 0.5,
       "maxHits": 1,
       "spawnForward": 0.3,
       "spawnHeight": 0,
+      "areaDamageEnabled": true,
+      "areaDamageRadius": 4,
       "autoTargetEnabled": true,
       "autoTargetInfluence": 1.2,
-      "autoTargetRange": 12.0,
-      "areaDamageEnabled": true,
-      "areaDamageRadius": 2
+      "autoTargetRange": 12,
+      "spreadDegrees": 0,
+      "hasChain": false,
+      "chain": {
+        "maxBounces": 3,
+        "radius": 6,
+        "damageMultiplierPerBounce": 0.8
+      }
+    },
+    "zone": {
+      "entity": "fire_puddle",
+      "radius": 4,
+      "duration": 3,
+      "tickInterval": 0.2,
+      "height": 2,
+      "spawnOnHit": true,
+      "spawnOnExpire": true,
+      "effects": [
+        {
+          "type": "damage",
+          "target": "target",
+          "amount": 8,
+          "duration": 0,
+          "delay": 0,
+          "activeOnAnticipation": false
+        }
+      ]
     }
   }
 }
