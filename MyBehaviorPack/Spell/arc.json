@@ -1,0 +1,85 @@
+{
+  "id": "arc",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during"
+      ]
+    },
+    "timing": {
+      "anticipation": 0.3,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.3,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 3
+    },
+    "projectile": {
+      "sizeX": 0.5,
+      "sizeY": 0.5,
+      "sizeZ": 0.5,
+      "speed": 16,
+      "lifetime": 1.2,
+      "maxHits": 1,
+      "spawnForward": 0.3,
+      "spawnHeight": 0,
+      "autoTargetEnabled": true,
+      "autoTargetInfluence": 2,
+      "autoTargetRange": 20,
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 25,
+              "duration": 0.15
+            },
+            {
+              "type": "applyStatus",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "status": "shocked",
+              "stacks": 1,
+              "duration": 0
+            },
+            {
+              "type": "spawn",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "spell": "arc",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "nearestEnemy",
+              "searchRadius": 6,
+              "maxRepeats": 3,
+              "damageMultiplier": 0.8,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

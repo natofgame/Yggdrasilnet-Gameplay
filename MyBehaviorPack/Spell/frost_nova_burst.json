@@ -1,0 +1,43 @@
+{
+  "id": "frost_nova_burst",
+  "components": {
+    "type": {
+      "type": "burst"
+    },
+    "burst": {
+      "entity": "fire_puddle",
+      "radius": 1,
+      "height": 2,
+      "visualDuration": 0.4
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 40,
+              "duration": 0.15
+            },
+            {
+              "type": "applyStatus",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "status": "frozen",
+              "stacks": 1,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

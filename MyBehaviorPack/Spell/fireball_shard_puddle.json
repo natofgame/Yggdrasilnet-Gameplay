@@ -1,0 +1,35 @@
+{
+  "id": "fireball_shard_puddle",
+  "components": {
+    "type": {
+      "type": "zone"
+    },
+    "zone": {
+      "entity": "fire_puddle",
+      "radius": 1.2,
+      "duration": 3,
+      "tickInterval": 0.5,
+      "height": 2
+    },
+    "events": {
+      "events": [
+        {
+          "on": "tick",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "applyStatus",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "status": "burning",
+              "stacks": 1,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

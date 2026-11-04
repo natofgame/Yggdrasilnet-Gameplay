@@ -1,0 +1,79 @@
+{
+  "id": "frost_nova_field",
+  "components": {
+    "type": {
+      "type": "zone"
+    },
+    "zone": {
+      "entity": "ice_puddle",
+      "radius": 1,
+      "duration": 2,
+      "tickInterval": 0.25,
+      "height": 1
+    },
+    "events": {
+      "events": [
+        {
+          "on": "spawn",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_core",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        },
+        {
+          "on": "tick",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "applyStatus",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "status": "chilled",
+              "stacks": 1,
+              "duration": 0
+            }
+          ]
+        },
+        {
+          "on": "expire",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_burst",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

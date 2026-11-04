@@ -1,0 +1,52 @@
+{
+  "id": "frost_nova",
+  "components": {
+    "type": {
+      "type": "self"
+    },
+    "debuff": {
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during"
+      ]
+    },
+    "timing": {
+      "anticipation": 0.3,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.3,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 6
+    },
+    "events": {
+      "events": [
+        {
+          "on": "strike",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_field",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

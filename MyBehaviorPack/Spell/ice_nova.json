@@ -1,0 +1,90 @@
+{
+  "id": "ice_nova",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 1,
+      "when": [
+        "before",
+        "during",
+        "after"
+      ]
+    },
+    "timing": {
+      "anticipation": 1.5,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.6,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 6
+    },
+    "projectile": {
+      "sizeX": 0.5,
+      "sizeY": 0.5,
+      "sizeZ": 0.5,
+      "speed": 5,
+      "lifetime": 1.2,
+      "maxHits": 1,
+      "spawnForward": 0.3,
+      "spawnHeight": 0,
+      "autoTargetEnabled": true,
+      "autoTargetInfluence": 20,
+      "autoTargetRange": 7,
+      "autoTargetAnyCaster": true,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_field",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        },
+        {
+          "on": "expire",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_field",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

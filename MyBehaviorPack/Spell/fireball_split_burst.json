@@ -1,0 +1,34 @@
+{
+  "id": "fireball_split_burst",
+  "components": {
+    "type": {
+      "type": "burst"
+    },
+    "burst": {
+      "entity": "fire_puddle",
+      "radius": 2,
+      "height": 2,
+      "visualDuration": 0.4
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 15,
+              "duration": 0.15
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

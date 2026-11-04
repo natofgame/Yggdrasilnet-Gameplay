@@ -1,0 +1,44 @@
+{
+  "id": "summon_skeletons",
+  "components": {
+    "type": {
+      "type": "self"
+    },
+    "timing": {
+      "anticipation": 0.3,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.3,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 3
+    },
+    "events": {
+      "events": [
+        {
+          "on": "strike",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "summon",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "entity": "skeleton_mage",
+              "count": 5,
+              "max": 5,
+              "replace": true,
+              "distance": 2,
+              "followDistance": 1.5,
+              "assistRange": 8,
+              "leashDistance": 12
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

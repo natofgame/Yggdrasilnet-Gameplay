@@ -1,0 +1,87 @@
+{
+  "id": "fireball_shard",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "projectile": {
+      "sizeX": 0.3,
+      "sizeY": 0.3,
+      "sizeZ": 0.3,
+      "speed": 10,
+      "lifetime": 0.3,
+      "maxHits": 1,
+      "spawnForward": 0.3,
+      "spawnHeight": 0,
+      "autoTargetEnabled": false,
+      "autoTargetInfluence": 1,
+      "autoTargetRange": 0,
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 10,
+              "duration": 0.15
+            },
+            {
+              "type": "spawn",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "spell": "fireball_shard_puddle",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        },
+        {
+          "on": "expire",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "fireball_shard_puddle",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    },
+    "timing": {
+      "anticipation": 0,
+      "strike": 0,
+      "impact": 0,
+      "return": 0,
+      "skipReturn": false
+    }
+  }
+}

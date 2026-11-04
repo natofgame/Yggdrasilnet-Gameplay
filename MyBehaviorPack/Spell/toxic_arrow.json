@@ -1,0 +1,83 @@
+{
+  "id": "toxic_arrow",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during"
+      ]
+    },
+    "timing": {
+      "anticipation": 0.3,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.3,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 2
+    },
+    "projectile": {
+      "sizeX": 0.3,
+      "sizeY": 0.3,
+      "sizeZ": 0.3,
+      "speed": 18,
+      "lifetime": 1.2,
+      "maxHits": 1,
+      "spawnForward": 0.3,
+      "spawnHeight": 0,
+      "autoTargetEnabled": true,
+      "autoTargetInfluence": 2,
+      "autoTargetRange": 20,
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 20,
+              "duration": 0.15
+            }
+          ]
+        },
+        {
+          "on": "kill",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "toxic_cloud",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

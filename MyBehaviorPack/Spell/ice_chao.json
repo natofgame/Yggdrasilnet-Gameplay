@@ -1,0 +1,71 @@
+{
+  "id": "ice_chao",
+  "components": {
+    "type": {
+      "type": "projectile"
+    },
+    "debuff": {
+      "reduction": 0.5,
+      "when": [
+        "before",
+        "during",
+        "after"
+      ]
+    },
+    "timing": {
+      "anticipation": 0.2,
+      "strike": 0.2,
+      "impact": 0,
+      "return": 0.1,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 0.3
+    },
+    "projectile": {
+      "sizeX": 0.5,
+      "sizeY": 0.5,
+      "sizeZ": 0.5,
+      "speed": 16,
+      "lifetime": 1,
+      "maxHits": 1,
+      "spawnForward": 0.3,
+      "spawnHeight": 0,
+      "autoTargetEnabled": true,
+      "autoTargetInfluence": 0.5,
+      "autoTargetRange": 5,
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 10,
+              "duration": 0.15
+            },
+            {
+              "type": "applyStatus",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "status": "chilled",
+              "stacks": 1,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

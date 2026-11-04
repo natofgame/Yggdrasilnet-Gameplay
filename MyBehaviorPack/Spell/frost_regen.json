@@ -1,0 +1,28 @@
+{
+  "id": "frost_regen",
+  "components": {
+    "type": {
+      "type": "passive"
+    },
+    "events": {
+      "events": [
+        {
+          "on": "statusTick",
+          "status": "frozen",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "effect": "heal",
+              "amount": 5,
+              "duration": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

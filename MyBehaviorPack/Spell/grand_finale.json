@@ -1,0 +1,146 @@
+{
+  "id": "grand_finale",
+  "components": {
+    "type": {
+      "type": "self"
+    },
+    "debuff": {
+      "reduction": 0.9,
+      "when": [
+        "before",
+        "during"
+      ]
+    },
+    "timing": {
+      "anticipation": 1,
+      "strike": 0.3,
+      "impact": 0,
+      "return": 0.4,
+      "skipReturn": false
+    },
+    "cooldown": {
+      "type": "fixed",
+      "duration": 20
+    },
+    "events": {
+      "events": [
+        {
+          "on": "anticipation",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "frost_nova_field",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        },
+        {
+          "on": "strike",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "effect": "heal",
+              "amount": 50,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "area",
+              "delay": 0,
+              "radius": 4,
+              "effect": "punch",
+              "amount": 20,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "area",
+              "delay": 0,
+              "radius": 4,
+              "effect": "damage",
+              "amount": 30,
+              "duration": 0.15
+            },
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "arc",
+              "count": 5,
+              "spreadDegrees": 360,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 2,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            },
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0.4,
+              "radius": 0,
+              "spell": "fireball_split",
+              "count": 6,
+              "spreadDegrees": 360,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 2,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            },
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0.9,
+              "radius": 0,
+              "spell": "ice",
+              "count": 8,
+              "spreadDegrees": 360,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1.5,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            },
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 1.4,
+              "radius": 0,
+              "spell": "toxic_cloud",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
