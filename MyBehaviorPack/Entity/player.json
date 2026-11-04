@@ -31,7 +31,7 @@
       "mask": "world|monster|spell"
     },
     "living": {
-      "max": 1000000,
+      "max": 200,
       "hasCurrent": false,
       "current": 0,
       "death": 0
@@ -42,7 +42,32 @@
         "dash",
         "fireball",
         "ice",
-        "flame_thrower"
+        "frost_nova",
+        "fireball_split",
+        "summon_skeletons",
+        "toxic_arrow",
+        "summon_skeletons"
+      ]
+    },
+    "stats": {
+      "values": [
+        {
+          "id": "mana.max",
+          "value": 100
+        },
+        {
+          "id": "mana.regen",
+          "value": 5
+        }
+      ]
+    },
+    "resources": {
+      "pools": [
+        {
+          "id": "mana",
+          "startFull": true,
+          "start": 0
+        }
       ]
     }
   }

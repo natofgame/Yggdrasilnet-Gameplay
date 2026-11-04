@@ -15,15 +15,23 @@
       "type": "fixed",
       "duration": 2
     },
-    "effects": {
-      "effects": [
+    "events": {
+      "events": [
         {
-          "type": "dash",
-          "target": "self",
-          "amount": 20,
-          "duration": 0.1,
-          "delay": 0.05,
-          "activeOnAnticipation": false
+          "on": "strike",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "self",
+              "delay": 0.05,
+              "radius": 0,
+              "effect": "dash",
+              "amount": 20,
+              "duration": 0.1
+            }
+          ]
         }
       ]
     }

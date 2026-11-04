@@ -28,23 +28,39 @@
       "cardinalHitBoxMaxZ": 3,
       "targetLayer": "all"
     },
-    "effects": {
-      "effects": [
+    "events": {
+      "events": [
         {
-          "type": "damage",
-          "target": "target",
-          "amount": 8,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
+          "on": "strike",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 8,
+              "duration": 0.15
+            }
+          ]
         },
         {
-          "type": "dash",
-          "target": "self",
-          "amount": 25,
-          "duration": 0.2,
-          "delay": 0,
-          "activeOnAnticipation": true
+          "on": "anticipation",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "effect": "dash",
+              "amount": 25,
+              "duration": 0.2
+            }
+          ]
         }
       ]
     }

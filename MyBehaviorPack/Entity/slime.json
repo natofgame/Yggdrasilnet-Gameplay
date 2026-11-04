@@ -81,7 +81,8 @@
           "minCooldown": 1.1,
           "maxCooldown": 2.6,
           "cooldownJitter": 0.25,
-          "randomReadySpell": true
+          "randomReadySpell": true,
+          "protectionBelowHealth": 0.5
         },
         {
           "type": "flee",

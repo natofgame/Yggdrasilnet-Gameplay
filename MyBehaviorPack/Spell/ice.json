@@ -23,26 +23,6 @@
       "type": "fixed",
       "duration": 15
     },
-    "effects": {
-      "effects": [
-        {
-          "type": "damage",
-          "target": "target",
-          "amount": 60,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        },
-        {
-          "type": "punch",
-          "target": "target",
-          "amount": 0.5,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        }
-      ]
-    },
     "projectile": {
       "sizeX": 0.5,
       "sizeY": 0.5,
@@ -52,18 +32,40 @@
       "maxHits": 1,
       "spawnForward": 0.3,
       "spawnHeight": 0,
-      "areaDamageEnabled": false,
-      "areaDamageRadius": 0,
       "autoTargetEnabled": true,
       "autoTargetInfluence": 2,
       "autoTargetRange": 20,
-      "spreadDegrees": 0,
-      "hasChain": false,
-      "chain": {
-        "maxBounces": 3,
-        "radius": 6,
-        "damageMultiplierPerBounce": 0.8
-      }
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
+    },
+    "events": {
+      "events": [
+        {
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 60,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "punch",
+              "amount": 0.5,
+              "duration": 0.15
+            }
+          ]
+        }
+      ]
     }
   }
 }

@@ -2,7 +2,7 @@
   "id": "skeleton_mage",
   "components": {
     "movement": {
-      "speed": 1.5,
+      "speed": 3,
       "steering": {
         "avoidRadius": 0,
         "avoidWeight": 1,
@@ -19,9 +19,9 @@
       }
     },
     "brain": {
-      "prudence": 1,
+      "prudence": 10,
       "impulsivity": 7,
-      "aggressivity": 10,
+      "aggressivity": 0,
       "courage": 8,
       "curiosity": 6,
       "discipline": 0,
@@ -81,7 +81,8 @@
           "minCooldown": 0.85,
           "maxCooldown": 2.1,
           "cooldownJitter": 0.35,
-          "randomReadySpell": true
+          "randomReadySpell": true,
+          "protectionBelowHealth": 0.5
         },
         {
           "type": "flee",
@@ -107,9 +108,9 @@
       ]
     },
     "collision": {
-      "sizeX": 1,
+      "sizeX": 0.5,
       "sizeY": 1.8,
-      "sizeZ": 1,
+      "sizeZ": 0.5,
       "trigger": false,
       "layer": "monster",
       "mask": "all"

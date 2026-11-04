@@ -23,50 +23,6 @@
       "type": "fixed",
       "duration": 0
     },
-    "effects": {
-      "effects": [
-        {
-          "type": "damage",
-          "target": "target",
-          "amount": 35,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        },
-        {
-          "type": "punch",
-          "target": "target",
-          "amount": 20,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        },
-        {
-          "type": "damage",
-          "target": "aoe",
-          "amount": 15,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        },
-        {
-          "type": "punch",
-          "target": "aoe",
-          "amount": 10,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        },
-        {
-          "type": "punch",
-          "target": "aoe",
-          "amount": 10,
-          "duration": 0.15,
-          "delay": 0,
-          "activeOnAnticipation": false
-        }
-      ]
-    },
     "projectile": {
       "sizeX": 0.5,
       "sizeY": 0.5,
@@ -76,37 +32,108 @@
       "maxHits": 1,
       "spawnForward": 0.3,
       "spawnHeight": 0,
-      "areaDamageEnabled": true,
-      "areaDamageRadius": 4,
       "autoTargetEnabled": true,
       "autoTargetInfluence": 1.2,
       "autoTargetRange": 12,
-      "spreadDegrees": 0,
-      "hasChain": false,
-      "chain": {
-        "maxBounces": 3,
-        "radius": 6,
-        "damageMultiplierPerBounce": 0.8
-      }
+      "autoTargetAnyCaster": false,
+      "spreadDegrees": 0
     },
-    "zone": {
-      "entity": "fire_puddle",
-      "radius": 4,
-      "duration": 3,
-      "tickInterval": 0.2,
-      "height": 2,
-      "spawnOnHit": true,
-      "spawnOnExpire": true,
-      "effects": [
+    "events": {
+      "events": [
         {
-          "type": "damage",
-          "target": "target",
-          "amount": 8,
-          "duration": 0,
-          "delay": 0,
-          "activeOnAnticipation": false
+          "on": "hit",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "damage",
+              "amount": 35,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "effect": "punch",
+              "amount": 20,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "area",
+              "delay": 0,
+              "radius": 4,
+              "effect": "damage",
+              "amount": 15,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "area",
+              "delay": 0,
+              "radius": 4,
+              "effect": "punch",
+              "amount": 10,
+              "duration": 0.15
+            },
+            {
+              "type": "effect",
+              "target": "area",
+              "delay": 0,
+              "radius": 4,
+              "effect": "punch",
+              "amount": 10,
+              "duration": 0.15
+            },
+            {
+              "type": "spawn",
+              "target": "target",
+              "delay": 0,
+              "radius": 0,
+              "spell": "fireball_zone",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
+        },
+        {
+          "on": "expire",
+          "status": "",
+          "interval": 0.5,
+          "actions": [
+            {
+              "type": "spawn",
+              "target": "self",
+              "delay": 0,
+              "radius": 0,
+              "spell": "fireball_zone",
+              "count": 1,
+              "spreadDegrees": 0,
+              "direction": "parent",
+              "searchRadius": 6,
+              "maxRepeats": 0,
+              "damageMultiplier": 1,
+              "offsetForward": 0,
+              "offsetHeight": 0
+            }
+          ]
         }
       ]
+    },
+    "cost": {
+      "resource": "mana",
+      "amount": 30
     }
   }
 }

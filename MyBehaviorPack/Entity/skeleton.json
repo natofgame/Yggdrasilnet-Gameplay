@@ -81,7 +81,8 @@
           "minCooldown": 0.85,
           "maxCooldown": 2.1,
           "cooldownJitter": 0.35,
-          "randomReadySpell": true
+          "randomReadySpell": true,
+          "protectionBelowHealth": 0.5
         },
         {
           "type": "flee",
@@ -107,9 +108,9 @@
       ]
     },
     "collision": {
-      "sizeX": 1,
+      "sizeX": 0.45,
       "sizeY": 1.8,
-      "sizeZ": 1,
+      "sizeZ": 0.45,
       "trigger": false,
       "layer": "monster",
       "mask": "all"

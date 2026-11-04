@@ -1,4 +1,4 @@
-﻿{
+{
   "id": "donjon_spawn_rule",
   "entity": [
     {
@@ -8,6 +8,10 @@
     {
       "weight": 20,
       "id": "skeleton_mage"
+    },
+    {
+      "weight": 20,
+      "id": "ice_skeleton"
     }
   ]
 }
