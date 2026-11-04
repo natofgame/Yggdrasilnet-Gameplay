@@ -1,0 +1,15 @@
+{
+  "id": "chilled",
+  "components": {
+    "duration": {
+      "seconds": 1
+    },
+    "modifiers": {
+      "moveSpeed": 0.6,
+      "castSpeed": 1,
+      "damageTaken": 1,
+      "canMove": true,
+      "canCast": true
+    }
+  }
+}

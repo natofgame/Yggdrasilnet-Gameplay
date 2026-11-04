@@ -1,0 +1,15 @@
+{
+  "id": "frozen",
+  "components": {
+    "duration": {
+      "seconds": 2
+    },
+    "modifiers": {
+      "moveSpeed": 1,
+      "castSpeed": 1,
+      "damageTaken": 1,
+      "canMove": false,
+      "canCast": false
+    }
+  }
+}

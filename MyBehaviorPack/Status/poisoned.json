@@ -1,0 +1,22 @@
+{
+  "id": "poisoned",
+  "components": {
+    "duration": {
+      "seconds": 4
+    },
+    "periodic": {
+      "interval": 1,
+      "effects": [
+        {
+          "type": "effect",
+          "target": "target",
+          "delay": 0,
+          "radius": 0,
+          "effect": "damage",
+          "amount": 4,
+          "duration": 0.15
+        }
+      ]
+    }
+  }
+}

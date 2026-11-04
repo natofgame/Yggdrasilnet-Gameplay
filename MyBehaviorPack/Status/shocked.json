@@ -1,0 +1,15 @@
+{
+  "id": "shocked",
+  "components": {
+    "duration": {
+      "seconds": 4
+    },
+    "modifiers": {
+      "moveSpeed": 1,
+      "castSpeed": 1,
+      "damageTaken": 1.2,
+      "canMove": true,
+      "canCast": true
+    }
+  }
+}

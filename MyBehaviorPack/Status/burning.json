@@ -1,0 +1,26 @@
+{
+  "id": "burning",
+  "components": {
+    "duration": {
+      "seconds": 3
+    },
+    "stacking": {
+      "max": 3,
+      "mode": "stack"
+    },
+    "periodic": {
+      "interval": 0.5,
+      "effects": [
+        {
+          "type": "effect",
+          "target": "target",
+          "delay": 0,
+          "radius": 0,
+          "effect": "damage",
+          "amount": 3,
+          "duration": 0.15
+        }
+      ]
+    }
+  }
+}
